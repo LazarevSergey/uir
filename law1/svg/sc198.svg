@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<!-- Created by Kosikov S.V. for Inkscape -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Схема 198">
+  <defs>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.0,4.0 L -3.0,0.0 L 8.0,-4.0 C 7.0,-1.5 7.0,1.5 8.0,4.0 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2107558"
+     inkscape:cx="209.78151"
+     inkscape:cy="825.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1376"
+     inkscape:window-height="812"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="20"
+       rx="10"
+       x="230"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="240"
+       y="16"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="240"
+         y="16">Предупреждение подлежит</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,20 0,96"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,62 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,116 40,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="290"
+       y="40" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="56"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="56">обязательному рассмотрению</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="76">лицом, которому оно выдано</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="24"
+
+       x="290"
+       y="104" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="120"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="120">в срок, указанный в предупреждении</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="20"
+       rx="10"
+       x="230"
+       y="148" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="240"
+       y="164"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="240"
+         y="164">Срок выполнения предупреждения</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,168 0,42"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,210 40,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="290"
+       y="188" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="204"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="204">должен составлять не менее</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="224">чем десять дней</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="20"
+       rx="10"
+       x="200"
+       y="252" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="210"
+       y="268"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="210"
+         y="268"></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,272 0,284"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,304 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 220,556 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:cx="280"
+       sodipodi:cy="304"
+       sodipodi:rx="20"
+       sodipodi:ry="12"
+       d="m 300,304 a 20,12 0 1 1 -40,0 20,12 0 1 1 40,0 z"
+       transform="translate(0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="308"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="308">и</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 280,316 0,146"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 280,368 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 280,462 40,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="64"
+
+       x="320"
+       y="336" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="330"
+       y="352"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="330"
+         y="352">По мотивированному ходатайству</tspan><tspan
+         sodipodi:role="line"
+         x="330"
+         y="372">лица, которому выдано</tspan><tspan
+         sodipodi:role="line"
+         x="330"
+         y="392">предупреждение</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="84"
+
+       x="320"
+       y="420" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="330"
+       y="436"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="330"
+         y="436">и при наличии достаточных</tspan><tspan
+         sodipodi:role="line"
+         x="330"
+         y="456">оснований полагать, что</tspan><tspan
+         sodipodi:role="line"
+         x="330"
+         y="476">в установленный срок предупреждение</tspan><tspan
+         sodipodi:role="line"
+         x="330"
+         y="496">не может быть выполнено</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="64"
+
+       x="260"
+       y="524" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="540"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="540">указанный срок может быть</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="560">продлен антимонопольным</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="580">органом</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="64"
+
+       x="60"
+       y="608" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="624"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="624">Антимонопольный орган должен быть уведомлен о выполнении предупреждения</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="644">в течение трех дней со дня окончания срока, установленного для</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="664">его выполнения.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="84"
+
+       x="60"
+       y="692" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="708"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="708">При условии выполнения предупреждения дело о нарушении антимонопольного</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="728">законодательства не возбуждается и лицо, выполнившее предупреждение,</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="748">не подлежит административной ответственности за нарушение антимонопольного</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="768">законодательства в связи с его устранением.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="84"
+
+       x="60"
+       y="796" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="812"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="812">В случае невыполнения предупреждения в установленный срок при</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="832">наличии признаков нарушения антимонопольного законодательства</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="852">антимонопольный орган принимает решение о возбуждении дела о нарушении</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="872">антимонопольного законодательства.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="44"
+
+       x="60"
+       y="900" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="916"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="916">Порядок выдачи предупреждения и его форма утверждаются федеральным</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="936">антимонопольным органом.</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,10 0,252"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,10 70,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,158 70,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160,262 40,0 "
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="992"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="992">Схема 198. Предупреждение о прекращении действий (бездействия),</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1012">которые содержат признаки нарушения антимонопольного законодательства.</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1032">Дополнительные вопросы</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1032"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1032">Источник: Федеральный закон «О защите конкуренции» №135-ФЗ, ст.39.1.</tspan></text>
+  </g>
+</svg>

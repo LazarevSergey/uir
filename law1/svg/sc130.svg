@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<!-- Created by Kosikov S.V. for Inkscape -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Схема 130">
+  <defs>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.0,4.0 L -3.0,0.0 L 8.0,-4.0 C 7.0,-1.5 7.0,1.5 8.0,4.0 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2107558"
+     inkscape:cx="209.78151"
+     inkscape:cy="825.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1376"
+     inkscape:window-height="812"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="24"
+
+       x="260"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="16"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="16">Антимонопольный орган</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 370,24 0,20 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="24"
+
+       x="260"
+       y="44" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="60"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="60">рассматривает</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 370,68 0,20 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="24"
+
+       x="260"
+       y="88" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="104"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="104">жалобы на действия (бездействие)</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:cx="263"
+       sodipodi:cy="144"
+       sodipodi:rx="33"
+       sodipodi:ry="12"
+       d="m 296,144 a 33,12 0 1 1 -66,0 33,12 0 1 1 66,0 z"
+       transform="translate(0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="240"
+       y="148"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="240"
+         y="148">и (или)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 263,156 0,106"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 263,198 27,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 263,262 27,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="290"
+       y="176" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="192"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="192">продавца государственного</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="212">или муниципального имущества</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="290"
+       y="240" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="256"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="256">организатора продажи государственного</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="276">или муниципального имущества</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="260"
+       y="304" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="320"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="320">проводимой в электронной</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="340">форме</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="104"
+
+       x="60"
+       y="368" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="384"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="384">при проведении продажи государственного или муниципального имущества</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="404">в соответствии с Федеральным законом от 21 декабря 2001 года N</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="424">178-ФЗ О приватизации государственного и муниципального имущества</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="444">в порядке, установленном настоящей статьей, с учетом следующих</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="464">особенностей:</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 370,472 -320,20 "
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:cx="50"
+       sodipodi:cy="504"
+       sodipodi:rx="20"
+       sodipodi:ry="12"
+       d="m 70,504 a 20,12 0 1 1 -40,0 20,12 0 1 1 40,0 z"
+       transform="translate(0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="40"
+       y="508"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="40"
+         y="508">и</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,516 0,754"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,688 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,902 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,1036 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50,1270 40,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="304"
+
+       x="90"
+       y="536" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="100"
+       y="552"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="100"
+         y="552">1) обжалование действий (бездействия) продавца государственного</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="572">или муниципального имущества и (или) организатора продажи в антимонопольный</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="592">орган допускается в течение пяти рабочих дней со дня размещения</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="612">на официальном сайте в информационно-телекоммуникационной сети</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="632">Интернет, определенном в соответствии со статьей 15 Федерального</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="652">закона от 21 декабря 2001 года N 178-ФЗ О приватизации государственного</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="672">и муниципального имущества, или, если размещение на данном сайте</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="692">не предусмотрено, со дня подписания протокола о признании претендентов</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="712">участниками торгов (протокола о признании претендентов участниками</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="732">продажи при проведении продажи государственного или муниципального</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="752">имущества посредством публичного предложения либо продажи без</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="772">объявления цены) либо в течение пяти рабочих дней со дня размещения</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="792">на данном сайте или, если размещение на данном сайте не предусмотрено,</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="812">со дня подписания протокола об итогах проведения продажи подлежащего</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="832">приватизации имущества;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="84"
+
+       x="90"
+       y="860" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="100"
+       y="876"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="100"
+         y="876">2) жалоба на действия (бездействие) продавца государственного</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="896">или муниципального имущества и (или) организатора продажи рассматривается</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="916">антимонопольным органом в течение пяти рабочих дней со дня поступления</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="936">жалобы;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="144"
+
+       x="90"
+       y="964" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="100"
+       y="980"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="100"
+         y="980">3) в случае, если жалоба на действия (бездействие) продавца государственного</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1000">или муниципального имущества и (или) организатора продажи рассматривается</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1020">до даты окончания подачи заявок на участие в торгах (заявок на</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1040">участие в продаже при проведении продажи государственного или</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1060">муниципального имущества посредством публичного предложения или</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1080">продажи без объявления цены), комиссия антимонопольного органа</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1100">не вправе принять решение о выдаче предписания;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="284"
+
+       x="90"
+       y="1128" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="100"
+       y="1144"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1144">4) жалоба на действия (бездействие) продавца государственного</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1164">или муниципального имущества и (или) организатора продажи, связанные</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1184">с признанием претендентов участниками торгов (участниками продажи</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1204">при проведении продажи государственного или муниципального имущества</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1224">посредством публичного предложения или продажи без объявления</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1244">цены) или с отказом в таком признании, не может быть подана по</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1264">истечении пяти рабочих дней со дня размещения на указанном в пункте</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1284">1 настоящей части официальном сайте в информационно-телекоммуникационной</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1304">сети Интернет или, если размещение на сайте не предусмотрено,</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1324">со дня подписания протокола о признании претендентов участниками</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1344">торгов (протокола о признании претендентов участниками продажи</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1364">при проведении продажи государственного или муниципального имущества</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1384">посредством публичного предложения или продажи без объявления</tspan><tspan
+         sodipodi:role="line"
+         x="100"
+         y="1404">цены).</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1460"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1460">Схема 130. Порядок рассмотрения антимонопольным органом жалоб</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1480">на нарушение процедуры торгов и порядка заключения договоров.</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1500">Жалобы на действия продавца государственного или муниципального</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1520">имущества</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1500"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1500">Источник: Федеральный закон «О защите конкуренции» №135-ФЗ, ст.18.1.</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<!-- Created by Kosikov S.V. for Inkscape -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1260"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Схема 226">
+  <defs>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.0,4.0 L -3.0,0.0 L 8.0,-4.0 C 7.0,-1.5 7.0,1.5 8.0,4.0 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2107558"
+     inkscape:cx="209.78151"
+     inkscape:cy="825.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1376"
+     inkscape:window-height="812"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="324"
+
+       x="260"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="16"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="16">1. Решение и (или) выданное</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="36">на его основании предписание</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="56">по делу о нарушении антимонопольного</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="76">законодательства могут</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="96">быть пересмотрены по новым</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="116">и (или) вновь открывшимся</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="136">обстоятельствам комиссией,</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="156">принявшей такое решение</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="176">и (или) выдавшей такое</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="196">предписание, по заявлению</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="216">лица, участвующего в деле,</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="236">а также в случае установления</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="256">комиссией предусмотренных</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="276">настоящей статьей оснований</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="296">для пересмотра решения</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="316">и (или) предписания.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="64"
+
+       x="100"
+       y="344" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="110"
+       y="360"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="110"
+         y="360">Основаниями для пересмотра решения и (или) выданного</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="380">на его основании предписания по делу о нарушении антимонопольного</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="400">законодательства являются:</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:cx="103"
+       sodipodi:cy="440"
+       sodipodi:rx="33"
+       sodipodi:ry="12"
+       d="m 136,440 a 33,12 0 1 1 -66,0 33,12 0 1 1 66,0 z"
+       transform="translate(0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="80"
+       y="444"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="80"
+         y="444">и (или)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103,452 0,186"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103,514 27,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 103,638 27,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="84"
+
+       x="130"
+       y="472" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="140"
+       y="488"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="140"
+         y="488">1) выявление обстоятельств, которые не были и не могли</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="508">быть известны на момент оглашения резолютивной части</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="528">решения по делу, но имеют существенное значение для</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="548">правильного разрешения дела;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="124"
+
+       x="130"
+       y="576" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="140"
+       y="592"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="140"
+         y="592">2) фальсификация доказательств, заведомо ложное показание</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="612">лица, располагающего сведениями об обстоятельствах рассматриваемого</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="632">дела, заведомо ложное заключение эксперта, заведомо</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="652">неправильный перевод, повлекшие за собой принятие незаконного</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="672">или необоснованного решения и (или) выдачу на его основании</tspan><tspan
+         sodipodi:role="line"
+         x="140"
+         y="692">предписания.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="184"
+
+       x="100"
+       y="720" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="110"
+       y="736"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="110"
+         y="736">Заявление о пересмотре принятого антимонопольным органом</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="756">решения и (или) выданного на его основании предписания</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="776">по делу о нарушении антимонопольного законодательства</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="796">по новым и (или) вновь открывшимся обстоятельствам подается</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="816">в антимонопольный орган, комиссия которого приняла такое</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="836">решение и (или) выдала такое предписание, лицами, участвующими</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="856">в деле, в течение трех месяцев со дня, когда они узнали</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="876">или должны были узнать о наличии обстоятельств, являющихся</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="896">основанием для пересмотра решения и (или) предписания.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="124"
+
+       x="100"
+       y="924" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="110"
+       y="940"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="110"
+         y="940">По ходатайству лица, обратившегося с заявлением, пропущенный</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="960">срок подачи заявления может быть восстановлен антимонопольным</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="980">органом при условии, если ходатайство подано в течение</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1000">шести месяцев со дня установления оснований для пересмотра</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1020">решения и (или) предписания и антимонопольный орган</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1040">признает причины пропуска срока уважительными.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="540"
+       height="104"
+
+       x="100"
+       y="1068" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="110"
+       y="1084"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1084">Форма и содержание заявления о пересмотре принятого</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1104">антимонопольным органом решения и (или) выданного на</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1124">его основании предписания по делу о нарушении антимонопольного</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1144">законодательства определяются федеральным антимонопольным</tspan><tspan
+         sodipodi:role="line"
+         x="110"
+         y="1164">органом.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1220"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1220">Схема 226. Пересмотр решения и (или) предписания по делу о нарушении</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1240">антимонопольного законодательства по новым и (или) вновь открывшимся</tspan><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1260">обстоятельствам. Общие положения</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1260"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1260">Источник: Федеральный закон «О защите конкуренции» №135-ФЗ, ст.51.2.</tspan></text>
+  </g>
+</svg>

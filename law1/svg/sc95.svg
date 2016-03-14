@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<!-- Created by Kosikov S.V. for Inkscape -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1308"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Схема 95">
+  <defs>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.0,4.0 L -3.0,0.0 L 8.0,-4.0 C 7.0,-1.5 7.0,1.5 8.0,4.0 z "
+         transform="scale(1.1) rotate(180) translate(1,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2107558"
+     inkscape:cx="209.78151"
+     inkscape:cy="825.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1376"
+     inkscape:window-height="812"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="24"
+
+       x="260"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="16"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="16">Не допускается</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="44"
+
+       x="260"
+       y="44" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="270"
+       y="60"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="270"
+         y="60">недобросовестная конкуренция,</tspan><tspan
+         sodipodi:role="line"
+         x="270"
+         y="80">в том числе:</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       sodipodi:cx="250"
+       sodipodi:cy="120"
+       sodipodi:rx="20"
+       sodipodi:ry="12"
+       d="m 270,120 a 20,12 0 1 1 -40,0 20,12 0 1 1 40,0 z"
+       transform="translate(0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="240"
+       y="124"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="240"
+         y="124">и</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,132 0,778"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,214 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,368 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,532 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,726 40,0 "
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 250,910 40,0 "
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="124"
+
+       x="290"
+       y="152" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="168"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="168">1) распространение ложных,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="188">неточных или искаженных</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="208">сведений, которые могут</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="228">причинить убытки хозяйствующему</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="248">субъекту либо нанести</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="268">ущерб его деловой репутации;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="144"
+
+       x="290"
+       y="296" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="312"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="312">2) введение в заблуждение</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="332">в отношении характера,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="352">способа и места производства,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="372">потребительских свойств,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="392">качества и количества</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="412">товара или в отношении</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="432">его производителей;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="144"
+
+       x="290"
+       y="460" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="476"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="476">3) некорректное сравнение</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="496">хозяйствующим субъектом</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="516">производимых или реализуемых</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="536">им товаров с товарами,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="556">производимыми или реализуемыми</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="576">другими хозяйствующими</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="596">субъектами;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="204"
+
+       x="290"
+       y="624" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="640"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="640">4) продажа, обмен или</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="660">иное введение в оборот</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="680">товара, если при этом</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="700">незаконно использовались</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="720">результаты интеллектуальной</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="740">деятельности и приравненные</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="760">к ним средства индивидуализации</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="780">юридического лица, средства</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="800">индивидуализации продукции,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="820">работ, услуг;</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="220"
+       height="124"
+
+       x="290"
+       y="848" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="300"
+       y="864"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="864">5) незаконное получение,</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="884">использование, разглашение</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="904">информации, составляющей</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="924">коммерческую, служебную</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="944">или иную охраняемую законом</tspan><tspan
+         sodipodi:role="line"
+         x="300"
+         y="964">тайну.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="84"
+
+       x="60"
+       y="992" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="1008"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1008">Не допускается недобросовестная конкуренция, связанная с приобретением</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1028">и использованием исключительного права на средства индивидуализации</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1048">юридического лица, средства индивидуализации продукции, работ</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1068">или услуг.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       width="620"
+       height="124"
+
+       x="60"
+       y="1096" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="70"
+       y="1112"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1112">Решение федерального антимонопольного органа о нарушении положений</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1132">части 2 настоящей статьи в отношении приобретения и использования</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1152">исключительного права на товарный знак направляется заинтересованным</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1172">лицом в федеральный орган исполнительной власти по интеллектуальной</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1192">собственности для признания недействительным предоставления правовой</tspan><tspan
+         sodipodi:role="line"
+         x="70"
+         y="1212">охраны товарному знаку.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1268"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1268">Схема 95. Запрет на недобросовестную конкуренцию. Общие положения</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Times New Roman"
+       x="10"
+       y="1308"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="10"
+         y="1308">Источник: Федеральный закон «О защите конкуренции» №135-ФЗ, ст.14.</tspan></text>
+  </g>
+</svg>
