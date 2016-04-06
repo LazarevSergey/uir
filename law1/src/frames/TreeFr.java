@@ -49,7 +49,7 @@ public class TreeFr extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainpan.add(createConcTabPan(listconc, setObject));
         getContentPane().add(mainpan);
-        setVisible(true);
+        setVisible(false);
     }
     
     private JTabbedPane createConcTabPan(ListValue listconc, SSObject setObject){

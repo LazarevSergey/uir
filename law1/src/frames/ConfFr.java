@@ -43,6 +43,7 @@ import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import structure.ShemeObject.IntValue;
+import utils.Interface;
 
 /**
  *
@@ -229,7 +230,7 @@ public class ConfFr extends JFrame {
                 miniEnv.put("строки",new IntValue(1, "Int"));
                 switch ((String) box1.getSelectedItem()) {
                     case "Интерфейс":
-                        JFrame fr = (JFrame) Solver.subVal(ca, miniEnv).getComponentResult().getVal();
+                        JFrame fr = Interface.makeInterface(ca);//(JFrame) Solver.subVal(ca, miniEnv).getComponentResult().getVal();
                         fr.setVisible(true);
                         break;
                     default:
