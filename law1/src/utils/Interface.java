@@ -92,7 +92,7 @@ public class Interface {
                     menu = addJMenuObject(menuelem);
                     break;
                 case "Main":
-//                    menu = addJMenuMain(menuelem);
+//                    menu = addJMenuMain(menuelem); разобраться с заданием элементов меню в меню описываемых как Main
                     break;                                           
             }
         }
@@ -119,7 +119,7 @@ public class Interface {
                     menu.add(addJMenuItem(menuitem));
                     break;
                 case "меню":
-                    menu.add(addJMenu(menuitem));
+                    menu.add(addJMenu(menuitem)); 
                     break;           
             }
         }
@@ -150,10 +150,17 @@ public class Interface {
                     pan.add(splitpan);
                     break;
                 case "панель":
+                    JPanel panel = addPanel(comp);
+                    pan.add(panel);
                     break;
-            }
-//            if (((SSObject) comp.getVal()).getPropertyByName(""))
-//            System.out.println(comp.toString());
+                case "скрол":
+                    JScrollPane scroll = addScrollPane(comp);
+                    pan.add(scroll);
+                    break;
+                default:
+                    break;
+            }     
+            System.out.println(comp.toString());
         }
         return pan;        
     }
@@ -172,9 +179,67 @@ public class Interface {
                     splitpan.setDividerLocation(Double.parseDouble(splitpanprop.getVal().toString()));
                     break;
                 case "конт":
+                    splitpan = changeSplitPane(splitpanprop);
+                    break;
+                default:
                     break;
             }
         }
         return splitpan;
+    }
+
+    private static JPanel addPanel(IValue comp) {
+        JPanel panel = new JPanel();
+        return panel;
+    }
+
+    private static JScrollPane addScrollPane(IValue comp) {
+        JPanel panel = new JPanel();
+        JScrollPane scroll = new JScrollPane(panel);
+        return scroll;
+    }
+
+    private static JSplitPane changeSplitPane(IValue splitpanprop) {
+        JSplitPane splitpan = new JSplitPane();
+        for (IValue pan: (ArrayList<IValue>) splitpanprop.getVal()){
+            switch(((SSObject)pan.getVal()).getPropertyByName("место").getVal().toString()){
+                case "Left":
+                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.LEFT);
+                    break;
+                case "Right":
+                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.RIGHT);
+                    break;
+                case "Up":
+                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.TOP);
+                    break;
+                case "Down":
+                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.BOTTOM);
+            }
+        }
+        return splitpan;
+    }
+
+    private static Component addComponentToSplitPane(IValue pan) {
+        JPanel pane = new JPanel();
+        IValue panprop = ((SSObject)pan.getVal()).getPropertyByName("конт");
+        for (IValue prop: (ArrayList<IValue>) panprop.getVal()){
+            switch(prop.getName()){
+                case "сплитпанель":
+                    JSplitPane splitpan = addSplitPane(prop);
+                    pane.add(splitpan);
+                    break;
+                case "панель":
+                    JPanel panel = addPanel(prop);
+                    pane.add(panel);
+                    break;
+                case "скрол":
+                    JScrollPane scroll = addScrollPane(prop);
+                    pane.add(scroll);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return pane;
     }
 }
