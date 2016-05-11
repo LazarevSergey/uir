@@ -230,10 +230,10 @@ public class ConfFr extends JFrame {
                 miniEnv.put("строки",new IntValue(1, "Int"));
                 switch ((String) box1.getSelectedItem()) {
                     case "Интерфейс":
-                        JFrame fr = (JFrame) Solver.subVal(ca, miniEnv).getComponentResult().getVal();
+//                        JFrame fr = (JFrame) Solver.subVal(ca, miniEnv).getComponentResult().getVal();
                         JFrame fr1 = Interface.makeInterface(ca);
                         fr1.setVisible(true);
-                        fr.setVisible(true);
+//                        fr.setVisible(true);
                         break;
                     default:
 

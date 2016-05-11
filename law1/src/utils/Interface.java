@@ -19,6 +19,8 @@ import javax.swing.*;
 import structure.ShemeObject.IValue;
 import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
+import elements.*;
+import java.awt.PopupMenu;
 
 public class Interface {
     
@@ -74,6 +76,9 @@ public class Interface {
                             case "меню":
                                 menu.add(addJMenu(menuitem));
                                 break;
+                            case "радбат":
+                                menu.add(new SJRadioButton((ListValue) menuitem));
+                                break;
                         }
                     }
                     menu.setVisible(true);
@@ -92,7 +97,7 @@ public class Interface {
                     menu = addJMenuObject(menuelem);
                     break;
                 case "Main":
-//                    menu = addJMenuMain(menuelem); разобраться с заданием элементов меню в меню описываемых как Main
+                   menu = addJMenuMain(menuelem); //разобраться с заданием элементов меню в меню описываемых как Main
                     break;                                           
             }
         }
@@ -120,7 +125,10 @@ public class Interface {
                     break;
                 case "меню":
                     menu.add(addJMenu(menuitem)); 
-                    break;           
+                    break;   
+                case "радбат":
+                    menu.add(addJRadioButton(menuitem));  
+                    break;
             }
         }
         return menu;        
@@ -241,5 +249,27 @@ public class Interface {
             }
         }
         return pane;
+    }
+
+    private static JRadioButton addJRadioButton(IValue menuitem) {
+        JRadioButton radiobut = new JRadioButton();
+        for (IValue radiobutprop: ((SSObject) menuitem.getVal()).properties){
+            switch (radiobutprop.getName()){
+                case "ид":
+                    radiobut.setText(radiobutprop.getVal().toString());
+                    break;
+                case "выполняет":
+                    radiobut.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent ae) {
+                            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        }
+                    });
+                    break;
+                default:
+                    break;
+            }
+        }
+        return radiobut;
     }
 }
