@@ -277,6 +277,12 @@ public class Interface {
                     switch (radiobutprop.getVal().toString()){
                         case "да":
                             radiobut.setSelected(true);
+                            radiobut.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent ae) {
+                                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                }
+                            });
                             break;
                         case "нет":
                         default:
@@ -310,6 +316,12 @@ public class Interface {
                     switch (checkboxprop.getVal().toString()){
                         case "да":
                             checkbox.setSelected(true);
+                            checkbox.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent ae) {
+                                    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                                }
+                            });
                             break;
                         case "нет":
                         default:
