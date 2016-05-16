@@ -21,6 +21,7 @@ import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
 import elements.*;
 import java.awt.PopupMenu;
+import sun.swing.SwingAccessor;
 
 public class Interface {
     
@@ -97,7 +98,7 @@ public class Interface {
                     menu = addJMenuObject(menuelem);
                     break;
                 case "Main":
-                   menu = addJMenuMain(menuelem); //разобраться с заданием элементов меню в меню описываемых как Main
+//                   menu = addJMenuMain(menuelem); //разобраться с заданием элементов меню в меню описываемых как Main
                     break;                                           
             }
         }
@@ -128,6 +129,11 @@ public class Interface {
                     break;   
                 case "радбат":
                     menu.add(addJRadioButton(menuitem));  
+                    break;
+                case "чекбокс":
+                    menu.add(addJCheckBox(menuitem));
+                    break;
+                default:
                     break;
             }
         }
@@ -251,6 +257,7 @@ public class Interface {
         return pane;
     }
 
+    //практика
     private static JRadioButton addJRadioButton(IValue menuitem) {
         JRadioButton radiobut = new JRadioButton();
         for (IValue radiobutprop: ((SSObject) menuitem.getVal()).properties){
@@ -266,10 +273,54 @@ public class Interface {
                         }
                     });
                     break;
+                case "выбран":
+                    switch (radiobutprop.getVal().toString()){
+                        case "да":
+                            radiobut.setSelected(true);
+                            break;
+                        case "нет":
+                        default:
+                            radiobut.setSelected(false);
+                            break;
+                    }
+                    break;
                 default:
                     break;
             }
         }
         return radiobut;
+    }
+
+    private static JCheckBox addJCheckBox(IValue menuitem) {
+        JCheckBox checkbox = new JCheckBox();
+        for (IValue checkboxprop: ((SSObject) menuitem.getVal()).properties){
+            switch (checkboxprop.getName()){
+                case "ид":
+                    checkbox.setText(checkboxprop.getVal().toString());
+                    break;
+                case "выполняет":
+                    checkbox.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent ae) {
+                            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        }
+                    });
+                    break;
+                case "выбран":
+                    switch (checkboxprop.getVal().toString()){
+                        case "да":
+                            checkbox.setSelected(true);
+                            break;
+                        case "нет":
+                        default:
+                            checkbox.setSelected(false);
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        return checkbox;
     }
 }
