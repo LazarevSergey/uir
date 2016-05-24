@@ -193,7 +193,21 @@ public class Interface {
                     splitpan.setDividerLocation(Double.parseDouble(splitpanprop.getVal().toString()));
                     break;
                 case "конт":
-                    splitpan = changeSplitPane(splitpanprop);
+                    for (IValue pan: (ArrayList<IValue>) splitpanprop.getVal()){
+                        switch(((SSObject)pan.getVal()).getPropertyByName("место").getVal().toString()){
+                            case "Left":
+                                splitpan.add(addComponentToSplitPane(pan), JSplitPane.LEFT);
+                                break;
+                            case "Right":
+                                splitpan.add(addComponentToSplitPane(pan), JSplitPane.RIGHT);
+                                break;
+                            case "Up":
+                                splitpan.add(addComponentToSplitPane(pan), JSplitPane.TOP);
+                                break;
+                            case "Down":
+                                splitpan.add(addComponentToSplitPane(pan), JSplitPane.BOTTOM);
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -211,26 +225,6 @@ public class Interface {
         JPanel panel = new JPanel();
         JScrollPane scroll = new JScrollPane(panel);
         return scroll;
-    }
-
-    private static JSplitPane changeSplitPane(IValue splitpanprop) {
-        JSplitPane splitpan = new JSplitPane();
-        for (IValue pan: (ArrayList<IValue>) splitpanprop.getVal()){
-            switch(((SSObject)pan.getVal()).getPropertyByName("место").getVal().toString()){
-                case "Left":
-                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.LEFT);
-                    break;
-                case "Right":
-                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.RIGHT);
-                    break;
-                case "Up":
-                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.TOP);
-                    break;
-                case "Down":
-                    splitpan.add(addComponentToSplitPane(pan), JSplitPane.BOTTOM);
-            }
-        }
-        return splitpan;
     }
 
     private static Component addComponentToSplitPane(IValue pan) {
@@ -265,7 +259,7 @@ public class Interface {
                 case "ид":
                     radiobut.setText(radiobutprop.getVal().toString());
                     break;
-                case "выполняет":
+                case "конт":
                     radiobut.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent ae) {
@@ -336,3 +330,6 @@ public class Interface {
         return checkbox;
     }
 }
+
+//грис - ... компиляторов
+//dragon book
