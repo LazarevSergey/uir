@@ -21,14 +21,20 @@ import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
 import elements.*;
 import java.awt.PopupMenu;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import sun.swing.SwingAccessor;
 
-public class Interface {
+public class Interface extends JFrame {
+
+    public static JFrame newfr = new JFrame();
     
     public static JFrame makeInterface(ListValue arg){
         SSObject stringofinterface = (SSObject) arg.getVal().get(0).getVal();
         if (stringofinterface.getType().equals("окно")){
-            JFrame newfr = new JFrame();
+           // newfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             for(IValue partofframe : stringofinterface.properties){
                 switch(partofframe.getName()){
                     case "имя":
@@ -106,14 +112,24 @@ public class Interface {
     }
     
     public static JMenuItem addJMenuItem(IValue menuelem){
-        JMenuItem item = new JMenuItem((String) ((SSObject) menuelem.getVal()).properties.get(0).getVal());  
-        item.addActionListener(new ActionListener() {
+        JMenuItem item = new JMenuItem();
+        for(final IValue itemprop: ((SSObject) menuelem.getVal()).properties){
+            switch(itemprop.getName()){
+                case "имя":
+                    item.setText((String) itemprop.getVal());
+                    break;
+                case "команда":
+                    item.addActionListener(new ActionListener() {
 
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                        @Override
+                        public void actionPerformed(ActionEvent ae) {
+                            ArrayList<IValue> action = (ArrayList<IValue>) itemprop.getVal();
+                            checkKeyWord(action);
+                        }
+                    });
+                    break;
             }
-        });
+        }
         return item;        
     }
     
@@ -328,6 +344,40 @@ public class Interface {
             }
         }
         return checkbox;
+    }
+    
+    public static void checkKeyWord(ArrayList<IValue> action){
+        switch (action.get(0).getVal().toString()){
+            case "открытьфайл":
+                JFileChooser openf = new JFileChooser();
+                openf.setApproveButtonText("Открыть");
+                openf.setDialogTitle("Выберите файл для загрузки");
+                openf.setDialogType(JFileChooser.OPEN_DIALOG);
+                openf.setMultiSelectionEnabled(false);
+                openf.showOpenDialog(newfr);
+                File file = openf.getSelectedFile();
+                StringBuilder sb = new StringBuilder();
+                try {
+                    BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
+                    try {
+                        String s;
+                        while ((s = in.readLine()) != null) {
+                            sb.append(s);
+                            sb.append("\n");
+                        }
+                    } finally {
+                        in.close();
+                    }
+                } catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                JPanel component = (JPanel) newfr.getComponent(0).getComponentAt(0, 2);
+                JTextPane pane = new JTextPane();
+                pane.setText(sb.toString());
+                component.add(pane);
+                component.updateUI();
+                break;
+        }
     }
 }
 
