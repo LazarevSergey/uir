@@ -20,6 +20,7 @@ import structure.ShemeObject.IValue;
 import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
 import elements.*;
+import elementsofinterface.MJPanel;
 import java.awt.PopupMenu;
 import java.io.BufferedReader;
 import java.io.File;
@@ -180,7 +181,7 @@ public class Interface extends JFrame {
                     pan.add(splitpan);
                     break;
                 case "панель":
-                    JPanel panel = addPanel(comp);
+                    MJPanel panel = addPanel(comp);
                     pan.add(panel);
                     break;
                 case "скрол":
@@ -232,8 +233,16 @@ public class Interface extends JFrame {
         return splitpan;
     }
 
-    private static JPanel addPanel(IValue comp) {
-        JPanel panel = new JPanel();
+    private static MJPanel addPanel(IValue comp) {
+        MJPanel panel = new MJPanel();
+        for (IValue prop: ((SSObject) comp.getVal()).properties){
+            switch (prop.getName()){
+                case "ид":
+                    panel.setId(prop.getVal().toString());
+                default:
+                    break;
+            }
+        }        
         return panel;
     }
 
@@ -247,13 +256,13 @@ public class Interface extends JFrame {
         JPanel pane = new JPanel();
         IValue panprop = ((SSObject)pan.getVal()).getPropertyByName("конт");
         for (IValue prop: (ArrayList<IValue>) panprop.getVal()){
-            switch(prop.getName()){
+            switch(((SSObject) prop.getVal()).getType()){
                 case "сплитпанель":
                     JSplitPane splitpan = addSplitPane(prop);
                     pane.add(splitpan);
                     break;
                 case "панель":
-                    JPanel panel = addPanel(prop);
+                    MJPanel panel = addPanel(prop);
                     pane.add(panel);
                     break;
                 case "скрол":
@@ -349,6 +358,8 @@ public class Interface extends JFrame {
     public static void checkKeyWord(ArrayList<IValue> action){
         switch (action.get(0).getVal().toString()){
             case "открытьфайл":
+                String idpane = action.get(2).getVal().toString();
+                MJPanel pane = getMJPanelById(newfr.getRootPane().getComponents(), idpane);
                 JFileChooser openf = new JFileChooser();
                 openf.setApproveButtonText("Открыть");
                 openf.setDialogTitle("Выберите файл для загрузки");
@@ -371,13 +382,26 @@ public class Interface extends JFrame {
                 } catch(IOException e) {
                     throw new RuntimeException(e);
                 }
-                JPanel component = (JPanel) newfr.getComponent(0).getComponentAt(0, 2);
-                JTextPane pane = new JTextPane();
-                pane.setText(sb.toString());
-                component.add(pane);
-                component.updateUI();
+                JPanel component = new JPanel();
+                JTextPane textpane = new JTextPane();
+                textpane.setText(sb.toString());
+                component.add(textpane);
+                pane.setJPanel(component);
+                pane.updateUI();
                 break;
         }
+    }
+    
+    public static MJPanel getMJPanelById(Component[] pane, String id){
+        for (Component comp: pane){
+            if (comp instanceof MJPanel){
+                if (((MJPanel) comp).getId().equals(id))
+                    return (MJPanel) comp;
+            } else if (comp instanceof JPanel){
+                return getMJPanelById(((JPanel) comp).getComponents(), id);
+            }
+        }
+        return null;
     }
 }
 
