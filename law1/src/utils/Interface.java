@@ -386,20 +386,48 @@ public class Interface extends JFrame {
                 JTextPane textpane = new JTextPane();
                 textpane.setText(sb.toString());
                 component.add(textpane);
-                pane.setJPanel(component);
-                pane.updateUI();
+                if (pane != null){
+                    pane.setJPanel(component);
+                    pane.updateUI();
+                }
                 break;
         }
     }
     
     public static MJPanel getMJPanelById(Component[] pane, String id){
+        MJPanel panel = new MJPanel();
         for (Component comp: pane){
-            if (comp instanceof MJPanel){
-                if (((MJPanel) comp).getId().equals(id))
-                    return (MJPanel) comp;
-            } else if (comp instanceof JPanel){
-                return getMJPanelById(((JPanel) comp).getComponents(), id);
-            }
+            if (panel.getId() == (null)){
+                switch (comp.getClass().getName()){
+                    case "elementsofinterface.MJPanel":
+                        if (((MJPanel) comp).getId().equals(id)){
+                            panel = (MJPanel) comp;
+                            break;
+                        }
+                        break;
+                    case "javax.swing.JPanel":
+                        getMJPanelById(((JPanel) comp).getComponents(), id);
+                        break;
+                    case "javax.swing.JLayeredPane":
+                        getMJPanelById(((JLayeredPane) comp).getComponents(), id);
+                        break;
+                    case "javax.swing.JSplitPane":
+                        getMJPanelById(((JSplitPane) comp).getComponents(), id);
+                        break;
+                }
+//                if (comp instanceof MJPanel)
+//                    if (((MJPanel) comp).getId().equals(id)){
+//                        panel = (MJPanel) comp;
+//                        break;
+//                    }
+//                if (comp instanceof JPanel)
+//                    getMJPanelById(((JPanel) comp).getComponents(), id);
+//                if (comp instanceof JLayeredPane)
+//                    getMJPanelById(((JLayeredPane) comp).getComponents(), id);
+//                if (comp instanceof JSplitPane){
+//                    getMJPanelById(((JSplitPane) comp).getComponents(), id);
+//                }
+            } else break;
         }
         return null;
     }
