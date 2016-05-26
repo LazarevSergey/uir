@@ -359,7 +359,8 @@ public class Interface extends JFrame {
         switch (action.get(0).getVal().toString()){
             case "открытьфайл":
                 String idpane = action.get(2).getVal().toString();
-                MJPanel pane = getMJPanelById(newfr.getRootPane().getComponents(), idpane);
+                MJPanel ex = new MJPanel();
+                MJPanel pane = getMJPanelById(newfr.getRootPane().getComponents(), idpane, ex);
                 JFileChooser openf = new JFileChooser();
                 openf.setApproveButtonText("Открыть");
                 openf.setDialogTitle("Выберите файл для загрузки");
@@ -394,42 +395,31 @@ public class Interface extends JFrame {
         }
     }
     
-    public static MJPanel getMJPanelById(Component[] pane, String id){
-        MJPanel panel = new MJPanel();
+    public static MJPanel getMJPanelById(Component[] pane, String id, MJPanel panel){
         for (Component comp: pane){
             if (panel.getId() == (null)){
                 switch (comp.getClass().getName()){
                     case "elementsofinterface.MJPanel":
                         if (((MJPanel) comp).getId().equals(id)){
-                            panel = (MJPanel) comp;
-                            break;
+                            panel.setId(id);
+                            panel.setJPanel(((MJPanel) comp).getJPanel());
                         }
                         break;
                     case "javax.swing.JPanel":
-                        getMJPanelById(((JPanel) comp).getComponents(), id);
+                        getMJPanelById(((JPanel) comp).getComponents(), id, panel);
                         break;
                     case "javax.swing.JLayeredPane":
-                        getMJPanelById(((JLayeredPane) comp).getComponents(), id);
+                        getMJPanelById(((JLayeredPane) comp).getComponents(), id, panel);
                         break;
                     case "javax.swing.JSplitPane":
-                        getMJPanelById(((JSplitPane) comp).getComponents(), id);
+                        getMJPanelById(((JSplitPane) comp).getComponents(), id, panel);
                         break;
                 }
-//                if (comp instanceof MJPanel)
-//                    if (((MJPanel) comp).getId().equals(id)){
-//                        panel = (MJPanel) comp;
-//                        break;
-//                    }
-//                if (comp instanceof JPanel)
-//                    getMJPanelById(((JPanel) comp).getComponents(), id);
-//                if (comp instanceof JLayeredPane)
-//                    getMJPanelById(((JLayeredPane) comp).getComponents(), id);
-//                if (comp instanceof JSplitPane){
-//                    getMJPanelById(((JSplitPane) comp).getComponents(), id);
-//                }
+                if (panel.getId() != null)
+                    break;
             } else break;
         }
-        return null;
+        return panel;
     }
 }
 
