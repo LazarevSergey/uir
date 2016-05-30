@@ -21,11 +21,13 @@ import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
 import elements.*;
 import elementsofinterface.MJPanel;
+import elementsofinterface.MJTextPanel;
 import java.awt.PopupMenu;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import javax.swing.border.Border;
 import sun.swing.SwingAccessor;
 
 public class Interface extends JFrame {
@@ -51,10 +53,10 @@ public class Interface extends JFrame {
                         break;
                     case "размер":
                         ArrayList<IValue> bounds = (ArrayList<IValue>) partofframe.getVal();
-                        int i = Integer.parseInt(bounds.get(0).getVal().toString());
-                        int i1 = Integer.parseInt(bounds.get(2).getVal().toString());
-                        int i2 = Integer.parseInt(bounds.get(4).getVal().toString());
-                        int i3 = Integer.parseInt(bounds.get(6).getVal().toString());
+                        int i = (int) bounds.get(0).getVal();
+                        int i1 = (int) bounds.get(2).getVal();
+                        int i2 = (int) bounds.get(4).getVal();
+                        int i3 = (int) bounds.get(6).getVal();
                         newfr.setBounds(i, i1, i2, i3);
                         break;
                     case "конт":
@@ -172,28 +174,22 @@ public class Interface extends JFrame {
         return menu;  
     }
 
-    public static Component addComponent(IValue partofframe) {      
-        JPanel pan = new JPanel();
+    public static Component addComponent(IValue partofframe) { 
         for(IValue comp :  (ArrayList<IValue>) partofframe.getVal()){
             switch(((SSObject) comp.getVal()).getType()){
                 case "сплитпанель":
-                    JSplitPane splitpan = addSplitPane(comp);
-                    pan.add(splitpan);
-                    break;
+                    return addSplitPane(comp);
                 case "панель":
-                    MJPanel panel = addPanel(comp);
-                    pan.add(panel);
-                    break;
+                    return addPanel(comp);
                 case "скрол":
-                    JScrollPane scroll = addScrollPane(comp);
-                    pan.add(scroll);
-                    break;
+                    return addScrollPane(comp);
+                case "текстпанель":
+                    return addMJTextPanel(comp);
                 default:
                     break;
             }     
-            System.out.println(comp.toString());
         }
-        return pan;        
+        return null;   
     }
 
     public static JSplitPane addSplitPane(IValue comp) {
@@ -248,6 +244,13 @@ public class Interface extends JFrame {
 
     private static JScrollPane addScrollPane(IValue comp) {
         JPanel panel = new JPanel();
+        for (IValue prop : ((SSObject) comp.getVal()).properties){
+            switch (prop.getName()){
+                case "конт":
+                    panel.add(addComponent(prop));
+                    break;
+            }
+        }
         JScrollPane scroll = new JScrollPane(panel);
         return scroll;
     }
@@ -268,6 +271,12 @@ public class Interface extends JFrame {
                 case "скрол":
                     JScrollPane scroll = addScrollPane(prop);
                     pane.add(scroll);
+                    break;
+                case "текстпанель":
+                    MJTextPanel textpanel = new MJTextPanel();
+                    pane.add(textpanel);
+                    textpanel = addMJTextPanel(prop);
+                    pane.updateUI();
                     break;
                 default:
                     break;
@@ -359,8 +368,8 @@ public class Interface extends JFrame {
         switch (action.get(0).getVal().toString()){
             case "открытьфайл":
                 String idpane = action.get(2).getVal().toString();
-                MJPanel ex = new MJPanel();
-                MJPanel pane = getMJPanelById(newfr.getRootPane().getComponents(), idpane, ex);
+                MJTextPanel ex = new MJTextPanel();
+                MJTextPanel pane = getMJTextPanelById(newfr.getRootPane().getComponents(), idpane, ex);
                 JFileChooser openf = new JFileChooser();
                 openf.setApproveButtonText("Открыть");
                 openf.setDialogTitle("Выберите файл для загрузки");
@@ -383,14 +392,8 @@ public class Interface extends JFrame {
                 } catch(IOException e) {
                     throw new RuntimeException(e);
                 }
-                JPanel component = new JPanel();
-                JTextPane textpane = new JTextPane();
-                textpane.setText(sb.toString());
-                component.add(textpane);
-                if (pane != null){
-                    pane.setJPanel(component);
-                    pane.updateUI();
-                }
+                if(pane != null)
+                    pane.setText(sb.toString());
                 break;
         }
     }
@@ -414,11 +417,63 @@ public class Interface extends JFrame {
                     case "javax.swing.JSplitPane":
                         getMJPanelById(((JSplitPane) comp).getComponents(), id, panel);
                         break;
+                    default:
+                        break;
                 }
                 if (panel.getId() != null)
                     break;
             } else break;
         }
+        return panel;
+    }
+
+   public static MJTextPanel getMJTextPanelById(Component[] pane, String id, MJTextPanel panel){
+        for (Component comp: pane){
+            if (panel.getId() == (null)){
+                switch (comp.getClass().getName()){
+                    case "elementsofinterface.MJTextPanel":
+                        if (((MJTextPanel) comp).getId().equals(id)){
+                            panel.add(((MJTextPanel) comp));
+                        }
+                        break;
+                    case "javax.swing.JPanel":
+                        getMJTextPanelById(((JPanel) comp).getComponents(), id, panel);
+                        break;
+                    case "javax.swing.JLayeredPane":
+                        getMJTextPanelById(((JLayeredPane) comp).getComponents(), id, panel);
+                        break;
+                    case "javax.swing.JSplitPane":
+                        getMJTextPanelById(((JSplitPane) comp).getComponents(), id, panel);
+                        break;
+                    default:
+                        break;
+                }
+                if (panel.getId() != null)
+                    break;
+            } else break;
+        }
+        return panel;
+    }
+    
+    public static MJTextPanel addMJTextPanel(IValue comp){
+        MJTextPanel panel = new MJTextPanel();
+        JTextPane textpanel = new JTextPane();
+        for (IValue prop: ((SSObject) comp.getVal()).properties){
+            switch (prop.getName()){
+                case "ид":
+                    panel.setId(prop.getVal().toString());
+                    break;
+                case "размер":
+                    int x = (int) ((ArrayList<IValue>) prop.getVal()).get(0).getVal();
+                    int y = (int) ((ArrayList<IValue>) prop.getVal()).get(2).getVal();
+                    textpanel.setSize(x, y);
+                    textpanel.setText("hello");
+                    panel.add(textpanel);
+                    break;
+                default:
+                    break;
+            }
+        }    
         return panel;
     }
 }
