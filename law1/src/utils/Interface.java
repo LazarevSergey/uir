@@ -27,6 +27,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.border.Border;
 import sun.swing.SwingAccessor;
 
@@ -368,8 +369,6 @@ public class Interface extends JFrame {
         switch (action.get(0).getVal().toString()){
             case "открытьфайл":
                 String idpane = action.get(2).getVal().toString();
-                MJTextPanel ex = new MJTextPanel();
-                MJTextPanel pane = getMJTextPanelById(newfr.getRootPane().getComponents(), idpane, ex);
                 JFileChooser openf = new JFileChooser();
                 openf.setApproveButtonText("Открыть");
                 openf.setDialogTitle("Выберите файл для загрузки");
@@ -392,8 +391,38 @@ public class Interface extends JFrame {
                 } catch(IOException e) {
                     throw new RuntimeException(e);
                 }
-                if(pane != null)
-                    pane.setText(sb.toString());
+                setTextToMJTextPanelById(newfr.getRootPane().getComponents(), idpane, sb.toString());
+                break;
+            case "сохранитькак":
+                String saveidpane = action.get(2).getVal().toString();
+                MJTextPanel saveex = new MJTextPanel();
+                MJTextPanel savepane = getMJTextPanelById(newfr.getRootPane().getComponents(), saveidpane, saveex);
+                String a = savepane.getText();
+                JFileChooser saveas = new JFileChooser();
+//                saveas.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+                saveas.setApproveButtonText("Сохранить");
+                saveas.setDialogTitle("Выберите файл для сохранения");
+                saveas.setDialogType(JFileChooser.SAVE_DIALOG);
+                saveas.setMultiSelectionEnabled(false);
+                saveas.showSaveDialog(newfr);
+                File savefile = saveas.getSelectedFile();
+                try {
+                if(!savefile.exists()){
+                    savefile.createNewFile();
+                }
+                PrintWriter out = new PrintWriter(savefile.getAbsoluteFile());
+                try {
+                    out.print(savepane.getText());
+                } finally {
+                    out.close();
+                }
+                } catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                newfr.setTitle(savefile.getPath());
+                break;
+            case "выход":
+                newfr.dispose();
                 break;
         }
     }
@@ -433,7 +462,8 @@ public class Interface extends JFrame {
                 switch (comp.getClass().getName()){
                     case "elementsofinterface.MJTextPanel":
                         if (((MJTextPanel) comp).getId().equals(id)){
-                            panel.add(((MJTextPanel) comp));
+                            panel.setText(((MJTextPanel) comp).getText());
+//                            panel.add(((MJTextPanel) comp));
                         }
                         break;
                     case "javax.swing.JPanel":
@@ -466,15 +496,36 @@ public class Interface extends JFrame {
                 case "размер":
                     int x = (int) ((ArrayList<IValue>) prop.getVal()).get(0).getVal();
                     int y = (int) ((ArrayList<IValue>) prop.getVal()).get(2).getVal();
-                    textpanel.setSize(x, y);
-                    textpanel.setText("hello");
-                    panel.add(textpanel);
+                    panel.setSize(x, y);
                     break;
                 default:
                     break;
             }
         }    
         return panel;
+    }
+    
+    public static void setTextToMJTextPanelById(Component[] pane, String id, String str){
+        for (Component comp: pane){
+            switch (comp.getClass().getName()){
+                case "elementsofinterface.MJTextPanel":
+                    if (((MJTextPanel) comp).getId().equals(id)){
+                        ((MJTextPanel) comp).setText(str);
+                    }
+                    break;
+                case "javax.swing.JPanel":
+                    setTextToMJTextPanelById(((JPanel) comp).getComponents(), id, str);
+                    break;
+                case "javax.swing.JLayeredPane":
+                    setTextToMJTextPanelById(((JLayeredPane) comp).getComponents(), id, str);
+                    break;
+                case "javax.swing.JSplitPane":
+                    setTextToMJTextPanelById(((JSplitPane) comp).getComponents(), id, str);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
 
