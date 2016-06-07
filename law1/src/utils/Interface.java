@@ -22,14 +22,11 @@ import structure.ShemeObject.SSObject;
 import elements.*;
 import elementsofinterface.MJPanel;
 import elementsofinterface.MJTextPanel;
-import java.awt.PopupMenu;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.swing.border.Border;
-import sun.swing.SwingAccessor;
 
 public class Interface extends JFrame {
 
@@ -38,7 +35,7 @@ public class Interface extends JFrame {
     public static JFrame makeInterface(ListValue arg){
         SSObject stringofinterface = (SSObject) arg.getVal().get(0).getVal();
         if (stringofinterface.getType().equals("окно")){
-           // newfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//           newfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             for(IValue partofframe : stringofinterface.properties){
                 switch(partofframe.getName()){
                     case "имя":
@@ -487,7 +484,6 @@ public class Interface extends JFrame {
     
     public static MJTextPanel addMJTextPanel(IValue comp){
         MJTextPanel panel = new MJTextPanel();
-        JTextPane textpanel = new JTextPane();
         for (IValue prop: ((SSObject) comp.getVal()).properties){
             switch (prop.getName()){
                 case "ид":
@@ -497,6 +493,9 @@ public class Interface extends JFrame {
                     int x = (int) ((ArrayList<IValue>) prop.getVal()).get(0).getVal();
                     int y = (int) ((ArrayList<IValue>) prop.getVal()).get(2).getVal();
                     panel.setSize(x, y);
+                    break;
+                case "значение":
+                    panel.setText(prop.getVal().toString());
                     break;
                 default:
                     break;

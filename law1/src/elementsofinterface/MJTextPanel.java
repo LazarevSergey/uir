@@ -14,16 +14,13 @@ import javax.swing.JTextPane;
 public class MJTextPanel extends JTextPane{
     
     String id;
-//    JTextPane pane;
     
     public MJTextPanel(String id){
         this.id = id;
-        //this.pane = pane;
     }
     
     public MJTextPanel(){
         this.id = null;
-        //this.pane = new JTextPane();
     }
     
     public String getId(){
