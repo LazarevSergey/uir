@@ -495,7 +495,7 @@ public class Interface extends JFrame {
                     panel.setSize(x, y);
                     break;
                 case "значение":
-                    panel.setText(prop.getVal().toString());
+                    panel.setText((String) prop.getVal());
                     break;
                 default:
                     break;

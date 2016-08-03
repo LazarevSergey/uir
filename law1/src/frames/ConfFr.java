@@ -70,7 +70,7 @@ public class ConfFr extends JFrame {
         makeRight(rCenter, "HTML");
         right.add(rCenter, BorderLayout.CENTER);
         right.add(rTop, BorderLayout.NORTH);
-        final JComboBox box1 = new JComboBox(new String[]{"Интерфейс"}); //{"HTML", "Текст", "Интерфейс"});
+        final JComboBox box1 = new JComboBox(new String[]{"HTML", "Текст", "Интерфейс"}); //{"HTML", "Текст", "Интерфейс"});
         box1.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
