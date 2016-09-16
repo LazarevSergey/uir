@@ -236,7 +236,6 @@ public class ConfFr extends JFrame {
 //                        fr.setVisible(true);
                         break;
                     default:
-
                         String str = (String) Solver.subVal(ca, miniEnv).getStringResult().getVal();
                         ((JTextPane) ((JScrollPane) rCenter.getComponent(0)).getViewport().getView()).setText(str);
                         break;

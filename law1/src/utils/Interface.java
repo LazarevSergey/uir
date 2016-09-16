@@ -32,10 +32,15 @@ public class Interface extends JFrame {
 
     public static JFrame newfr = new JFrame();
     
-    public static JFrame makeInterface(ListValue arg){
+    public static JFrame makeInterface(ListValue arg){      
         SSObject stringofinterface = (SSObject) arg.getVal().get(0).getVal();
+        if (newfr.getContentPane().getComponents().length > 0)
+            for (Component a : newfr.getContentPane().getComponents())
+                newfr.remove(a);
+//        if (!newfr.getContentPane().)
+//            newfr.removeAll();
         if (stringofinterface.getType().equals("окно")){
-//           newfr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//           newfr.setDefaultCloseOperation(newfr.EXIT_ON_CLOSE);
             for(IValue partofframe : stringofinterface.properties){
                 switch(partofframe.getName()){
                     case "имя":
@@ -431,7 +436,6 @@ public class Interface extends JFrame {
                     case "elementsofinterface.MJPanel":
                         if (((MJPanel) comp).getId().equals(id)){
                             panel.setId(id);
-                            panel.setJPanel(((MJPanel) comp).getJPanel());
                         }
                         break;
                     case "javax.swing.JPanel":

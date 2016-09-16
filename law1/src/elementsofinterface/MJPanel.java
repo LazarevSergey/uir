@@ -14,21 +14,13 @@ import javax.swing.JPanel;
 public class MJPanel extends JPanel{
     
     String id;
-    JPanel pane;
-    
-    public MJPanel(String id, JPanel pane){
-        this.id = id;
-        this.pane = pane;
-    }
     
     public MJPanel(){
         this.id = null;
-        this.pane = new JPanel();
     }
     
     public MJPanel(String id){
         this.id = id;
-        this.pane = new JPanel();
     }
     
     public String getId(){
@@ -37,13 +29,5 @@ public class MJPanel extends JPanel{
     
     public void setId(String id){
         this.id = id;        
-    }
-    
-    public JPanel getJPanel(){
-        return pane;
-    }
-    
-    public void setJPanel(JPanel pane){
-        this.pane = pane;        
     }
 }
