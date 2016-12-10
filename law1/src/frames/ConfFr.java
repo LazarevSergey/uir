@@ -32,17 +32,22 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Box;
+import javax.swing.ButtonGroup;
 import javax.swing.GroupLayout;
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import structure.ShemeObject.IntValue;
+import utils.DataBase;
 import utils.Interface;
 
 /**
@@ -64,13 +69,13 @@ public class ConfFr extends JFrame {
         });
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         JPanel back = new JPanel(new BorderLayout());
-        JPanel right = new JPanel(new BorderLayout());
+        final JPanel right = new JPanel(new BorderLayout());
         JPanel rTop = new JPanel();
         final JPanel rCenter = new JPanel(new GridLayout(1, 1));
         makeRight(rCenter, "HTML");
         right.add(rCenter, BorderLayout.CENTER);
         right.add(rTop, BorderLayout.NORTH);
-        final JComboBox box1 = new JComboBox(new String[]{"HTML", "Текст", "Интерфейс"}); //{"HTML", "Текст", "Интерфейс"});
+        final JComboBox box1 = new JComboBox(new String[]{"HTML", "Текст", "Интерфейс", "База Данных"}); //{"HTML", "Текст", "Интерфейс"});
         box1.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -235,6 +240,17 @@ public class ConfFr extends JFrame {
                         fr1.setVisible(true);
 //                        fr.setVisible(true);
                         break;
+                    case "База Данных":
+                {
+                    try {
+                        DataBase.createNewDB(ca, rCenter);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (Exception ex) {
+                        Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                        break;
                     default:
                         String str = (String) Solver.subVal(ca, miniEnv).getStringResult().getVal();
                         ((JTextPane) ((JScrollPane) rCenter.getComponent(0)).getViewport().getView()).setText(str);
@@ -260,6 +276,19 @@ public class ConfFr extends JFrame {
                 final JTextPane pane1 = new JTextPane();
                 JScrollPane scroll1 = new JScrollPane(pane1);
                 pan.add(scroll1);
+                break;
+            case "База Данных":
+                ButtonGroup group = new ButtonGroup();
+                JRadioButton mysqlradio = new JRadioButton("MySQL");
+                mysqlradio.setName("MySQL");
+                group.add(mysqlradio);
+                JRadioButton psqlradio = new JRadioButton("PostgreSQL");
+                psqlradio.setName("PostgreSQL");
+                group.add(psqlradio);
+                pan.add(mysqlradio);
+                pan.add(psqlradio);
+                pan.add(Box.createVerticalGlue(),0);
+                pan.add(Box.createVerticalGlue());
                 break;
         }
     }
