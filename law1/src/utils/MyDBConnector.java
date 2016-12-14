@@ -30,10 +30,21 @@ public class MyDBConnector {
 
     public MyDBConnector(String dialect, String serverName, String mydatabase) throws SQLException {
         try {
-            Class.forName("com." + dialect + ".jdbc.Driver");
+            if (dialect.equals("mysql")){
+                Class.forName("com." + dialect + ".jdbc.Driver");
+            } else {
+                Class.forName("org." + dialect + ".Driver");
+            }
             url = "jdbc:" + dialect + "://" + serverName + "/" + mydatabase;
-            username = "root";
-            password = "";
+            switch(dialect){
+                case "mysql":
+                    username = "root";
+                    password = "";
+                    break;
+                case "postgresql":                    
+                    username = "postgre";
+                    password = "root";
+            }
             Properties properties=new Properties();
             properties.setProperty("user",username);
             properties.setProperty("password",password);

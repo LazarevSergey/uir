@@ -285,8 +285,12 @@ public class ConfFr extends JFrame {
                 JRadioButton psqlradio = new JRadioButton("PostgreSQL");
                 psqlradio.setName("PostgreSQL");
                 group.add(psqlradio);
+                JRadioButton sqllradio = new JRadioButton("SQLite");
+                sqllradio.setName("SQLite");
+                group.add(sqllradio);
                 pan.add(mysqlradio);
                 pan.add(psqlradio);
+                pan.add(sqllradio);
                 pan.add(Box.createVerticalGlue(),0);
                 pan.add(Box.createVerticalGlue());
                 break;
