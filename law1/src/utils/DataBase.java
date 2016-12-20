@@ -7,6 +7,8 @@ package utils;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JFrame;
@@ -20,12 +22,18 @@ import structure.ShemeObject.ListValue;
 import structure.ShemeObject.SSObject;
 import java.sql.*;
 import org.sqlite.*;
+import org.postgresql.*;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Box;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTextArea;
+import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
@@ -39,7 +47,6 @@ public class DataBase {
     public static void createNewDB(ListValue ca, JPanel pan) throws SQLException, Exception{
         JFrame newDB = new JFrame("новая БД");
         newDB.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        newDB.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel(new BorderLayout());
         JTabbedPane tabpan = new JTabbedPane(SwingConstants.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);        
         String server = null;
@@ -67,7 +74,10 @@ public class DataBase {
                                                 case "Object":
                                                     String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
                                                     String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                    tabpan.addTab(querryname, createQuerryPanelMySQL(querry, connect));
+                                                    JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                                    jsp.setTopComponent(createQuerryPanelMySQL(querry, connect));
+                                                    jsp.setBottomComponent(createNewSelectQuerry(connect, radbut.getName()));
+                                                    tabpan.addTab(querryname, jsp);
                                                     break;
                                                 default:
                                                     break;
@@ -88,7 +98,10 @@ public class DataBase {
                                                     case "Object":
                                                         String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
                                                         String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                        tabpan.addTab(querryname, createQuerryPanelPSQL(querry, statement));
+                                                        JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                                        jsp.setTopComponent(createQuerryPanelPSQL(querry, statement));
+                                                        jsp.setBottomComponent(new JPanel());
+                                                        tabpan.addTab(querryname, jsp);
                                                         break;
                                                     default:
                                                         break;
@@ -96,7 +109,6 @@ public class DataBase {
                                             }
                                         }
                                     }catch (Exception ex) {
-                                        //выводим наиболее значимые сообщения
                                         Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
                                     } finally {
                                         if (connection != null) {
@@ -121,7 +133,10 @@ public class DataBase {
                                                     case "Object":
                                                         String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
                                                         String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                        tabpan.addTab(querryname, createQuerryPanelSQLL(querry, statement));
+                                                        JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                                        jsp.setTopComponent(createQuerryPanelSQLL(querry, statement));
+                                                        jsp.setBottomComponent(new JPanel());
+                                                        tabpan.addTab(querryname, jsp);
                                                         break;
                                                     default:
                                                         break;
@@ -129,7 +144,6 @@ public class DataBase {
                                             }
                                         }
                                     }catch (Exception ex) {
-                                        //выводим наиболее значимые сообщения
                                         Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
                                     } finally {
                                         if (connection != null) {
@@ -249,11 +263,14 @@ public class DataBase {
                     case Types.VARCHAR :
                         element.add(rs.getString(col));
                         break;
-                    case Types.CHAR :
-                        element.add(rs.getString(col));
+                    case Types.BLOB :
+                        element.add(rs.getBlob(col));
                         break;
-                    case Types.BIGINT :
-                        element.add(rs.getBigDecimal(col));
+                    case Types.REAL :
+                        element.add(rs.getDouble(col));
+                        break;
+                    case Types.NULL:
+                        element.add(null);
                         break;
                     default :
                         element.add(rs.getString(col));
@@ -266,5 +283,68 @@ public class DataBase {
         JScrollPane jsp  = new JScrollPane(table);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
         return jsp;
+    }
+
+    private static Component createNewSelectQuerry(final MyDBConnector connect, final String name) {
+        final JPanel panel = new JPanel();
+        final JTextArea textar = new JTextArea(2, 100);        
+        panel.add(textar);
+        JButton updatebut = new JButton("UPDATE");
+        JButton selectbut = new JButton("SELECT");
+        selectbut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                String querry = textar.getText();
+                if (panel.getComponentCount() > 2){
+                    for (int i = 0; i <= panel.getComponentCount(); i++){
+                        if (i > 1){
+                            panel.remove(panel.getComponent(i));
+                        }
+                    }
+                }
+                switch(name){
+                    case "MySQL":
+                        try {
+                            panel.add(createQuerryPanelMySQL(querry, connect));
+                            panel.updateUI();
+                        } catch (Exception ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        break;
+                    case "PostgreSQL":
+                        try {
+                            panel.add(createQuerryPanelPSQL(querry, connect.connection.createStatement()));
+                            panel.updateUI();
+                        } catch (Exception ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        break;
+                    case "SQLite":
+                        try {
+                            panel.add(createQuerryPanelSQLL(querry, connect.connection.createStatement()));
+                            panel.updateUI();
+                        } catch (Exception ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        break;
+                }
+                            }
+        });
+        updatebut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                try {
+                    connect.connection.createStatement().executeUpdate(textar.getText());
+                    //необходимо заново производить загрузку из базы возможно необходимо создать свои версии JTABBEDPANE
+                    panel.getRootPane().updateUI();
+                    
+                } catch (SQLException ex) {
+                    Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+        panel.add(selectbut);
+        panel.add(updatebut);
+        return panel;
     }
 }

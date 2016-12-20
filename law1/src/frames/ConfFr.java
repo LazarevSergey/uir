@@ -241,15 +241,15 @@ public class ConfFr extends JFrame {
 //                        fr.setVisible(true);
                         break;
                     case "База Данных":
-                {
-                    try {
-                        DataBase.createNewDB(ca, rCenter);
-                    } catch (SQLException ex) {
-                        Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (Exception ex) {
-                        Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                }
+                        {
+                            try {
+                                DataBase.createNewDB(ca, rCenter);
+                            } catch (SQLException ex) {
+                                Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
+                            } catch (Exception ex) {
+                                Logger.getLogger(ConfFr.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
                         break;
                     default:
                         String str = (String) Solver.subVal(ca, miniEnv).getStringResult().getVal();
