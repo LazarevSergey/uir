@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -37,6 +38,7 @@ import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
+import org.postgresql.util.PSQLException;
 
 /**
  *
@@ -49,117 +51,111 @@ public class DataBase {
         newDB.setExtendedState(JFrame.MAXIMIZED_BOTH);
         JPanel panel = new JPanel(new BorderLayout());
         JTabbedPane tabpan = new JTabbedPane(SwingConstants.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);        
-        String server = null;
-        String db = null;
         MyDBConnector connect = null;
         Connection connection = null;
         for (Component radbut : pan.getComponents()){
             if (radbut instanceof JRadioButton){
                 if (((JRadioButton) radbut).isSelected()){
-                    for(IValue val: ((SSObject) ca.get(0).getVal()).properties){
-                        if (val.getName().equals("сервер")){
+                    String db = ((SSObject) ca.get(0).getVal()).getPropertyByName("база_данных").getVal().toString();
+                    String dialect = radbut.getName();
+                    String server = null;
+                    String user = null;
+                    String password = null;
+                    ArrayList<IValue> querries = (ArrayList<IValue>) ((SSObject) ca.get(0).getVal()).getPropertyByName("выполнить").getVal();
+                    switch(dialect){
+                        case "MySQL": 
                             server = ((SSObject) ca.get(0).getVal()).getPropertyByName("сервер").getVal().toString();
-                        }
-                        if (val.getName().equals("база_данных") || val.getName().equals("выполнить")){      
-                            switch(radbut.getName()){
-                                case "MySQL":
-                                    if (val.getName().equals("база_данных")){                           
-                                        db = ((SSObject) ca.get(0).getVal()).getPropertyByName("база_данных").getVal().toString();
-                                        connect = new MyDBConnector("mysql", server, db);
-                                    }
-                                    if (val.getName().equals("выполнить")){
-                                        ArrayList<IValue> querries = (ArrayList<IValue>) val.getVal();
-                                        for(IValue querryobj: querries){
-                                            switch(querryobj.getType()){
-                                                case "Object":
-                                                    String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
-                                                    String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                    JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-                                                    jsp.setTopComponent(createQuerryPanelMySQL(querry, connect));
-                                                    jsp.setBottomComponent(createNewSelectQuerry(connect, radbut.getName()));
-                                                    tabpan.addTab(querryname, jsp);
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-                                        }
-                                    }
-                                    break;
-                                case "PostgreSQL":
-                                    String url = "jdbc:postgresql://" + server + ":5433/" + ((SSObject) ca.get(0).getVal()).getPropertyByName("база_данных").getVal().toString();
-                                    try{
-                                        Class.forName("org.postgresql.Driver");
-                                        connection = DriverManager.getConnection(url, "postgres", "root");
-                                        Statement statement = connection.createStatement();
-                                        if (val.getName().equals("выполнить")){
-                                        ArrayList<IValue> querries = (ArrayList<IValue>) val.getVal();
-                                            for(IValue querryobj: querries){
-                                                switch(querryobj.getType()){
-                                                    case "Object":
-                                                        String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
-                                                        String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                        JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-                                                        jsp.setTopComponent(createQuerryPanelPSQL(querry, statement));
-                                                        jsp.setBottomComponent(new JPanel());
-                                                        tabpan.addTab(querryname, jsp);
-                                                        break;
-                                                    default:
-                                                        break;
-                                                }
-                                            }
-                                        }
-                                    }catch (Exception ex) {
-                                        Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
-                                    } finally {
-                                        if (connection != null) {
-                                            try {
-                                                connection.close();
-                                            } catch (SQLException ex) {
-                                                Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
-                                            }
-                                        }
-                                    }                                    
-                                    break;
-                                case "SQLite":
-                                    url = "jdbc:sqlite:" + ((SSObject) ca.get(0).getVal()).getPropertyByName("база_данных").getVal().toString() + ".db";
-                                    connection = DriverManager.getConnection(url);
-                                    try{
-                                        Class.forName("org.sqlite.JDBC");
-                                        Statement statement = connection.createStatement();
-                                        if (val.getName().equals("выполнить")){
-                                        ArrayList<IValue> querries = (ArrayList<IValue>) val.getVal();
-                                            for(IValue querryobj: querries){
-                                                switch(querryobj.getType()){
-                                                    case "Object":
-                                                        String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
-                                                        String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
-                                                        JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-                                                        jsp.setTopComponent(createQuerryPanelSQLL(querry, statement));
-                                                        jsp.setBottomComponent(new JPanel());
-                                                        tabpan.addTab(querryname, jsp);
-                                                        break;
-                                                    default:
-                                                        break;
-                                                }
-                                            }
-                                        }
-                                    }catch (Exception ex) {
-                                        Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
-                                    } finally {
-                                        if (connection != null) {
-                                            try {
-                                                connection.close();
-                                            } catch (SQLException ex) {
-                                                Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
-                                            }
-                                        }
-                                    }
-                                    break;
-                                default:
-                                    break;
+                            user = ((SSObject) ca.get(0).getVal()).getPropertyByName("пользователь").getVal().toString();
+                            password = ((SSObject) ca.get(0).getVal()).getPropertyByName("пароль").getVal().toString();
+                            connect = new MyDBConnector(dialect, server, null, db, user, password);
+                            for(IValue querryobj: querries){
+                                switch(querryobj.getType()){
+                                    case "Object":
+                                        String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
+                                        String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
+                                        JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                        JTable table = createQuerryPanelMySQL(querry, connect);
+                                        JScrollPane jspt = new JScrollPane(table);
+                                        jsp.setTopComponent(jspt);                                        
+                                        jsp.setBottomComponent(createNewQuerry(connect, radbut.getName(), querry, table));
+                                        tabpan.addTab(querryname, jsp);
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
-                        }
-                    }
+                            break;
+                        case "PostgreSQL":
+                            String port = ((SSObject) ca.get(0).getVal()).getPropertyByName("порт").getVal().toString();
+                            try{
+                                server = ((SSObject) ca.get(0).getVal()).getPropertyByName("сервер").getVal().toString();
+                                user = ((SSObject) ca.get(0).getVal()).getPropertyByName("пользователь").getVal().toString();
+                                password = ((SSObject) ca.get(0).getVal()).getPropertyByName("пароль").getVal().toString();
+                                connect = new MyDBConnector(dialect, server, port, db, user, password);
+                                Statement statement = connect.connection.createStatement();
+                                for(IValue querryobj: querries){
+                                    switch(querryobj.getType()){
+                                        case "Object":
+                                            String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
+                                            String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
+                                            JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                            JTable table = createQuerryPanelPSQL(querry, statement);
+                                            JScrollPane jspt = new JScrollPane(table);
+                                            jsp.setTopComponent(jspt);                                        
+                                            jsp.setBottomComponent(createNewQuerry(connect, radbut.getName(), querry, table));
+                                            tabpan.addTab(querryname, jsp);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                            }catch (Exception ex) {
+                                Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                            } finally {
+                                if (connection != null) {
+                                    try {
+                                        connection.close();
+                                    } catch (SQLException ex) {
+                                        Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                }
+                            }                                    
+                            break;
+                        case "SQLite":
+                            try{
+                                connect = new MyDBConnector(dialect, null, null, db, null, null);
+                                Statement statement = connect.connection.createStatement();
+                                for(IValue querryobj: querries){
+                                    switch(querryobj.getType()){
+                                        case "Object":
+                                            String querryname = ((SSObject) querryobj.getVal()).getPropertyByName("имя").getVal().toString();
+                                            String querry = ((SSObject) querryobj.getVal()).getPropertyByName("запрос").getVal().toString();
+                                            JSplitPane jsp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+                                            JTable table = createQuerryPanelSQLL(querry, statement);
+                                            JScrollPane jspt = new JScrollPane(table);
+                                            jsp.setTopComponent(jspt);                                        
+                                            jsp.setBottomComponent(createNewQuerry(connect, radbut.getName(), querry, table));
+                                            tabpan.addTab(querryname, jsp);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                            }catch (Exception ex) {
+                                Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                            } finally {
+                                if (connection != null) {
+                                    try {
+                                        connection.close();
+                                    } catch (SQLException ex) {
+                                        Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                }
+                            }
+                            break;
+                        default:
+                            break;
+                    }                    
                 }
             }
         }
@@ -168,7 +164,7 @@ public class DataBase {
         newDB.setVisible(true);
     }
 
-    private static JScrollPane createQuerryPanelMySQL(String querry, MyDBConnector connect) throws SQLException, Exception {
+    private static JTable createQuerryPanelMySQL(String querry, MyDBConnector connect) throws SQLException, Exception {
         JPanel panel = new JPanel(new BorderLayout());
         DefaultTableModel model = new DefaultTableModel();
         ResultSet rs = connect.connection.createStatement().executeQuery(querry);
@@ -203,10 +199,10 @@ public class DataBase {
         JTable table = new JTable(model);
         JScrollPane jsp  = new JScrollPane(table);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
-        return jsp;
+        return table;
     }
 
-    private static Component createQuerryPanelPSQL(String querry, Statement statement) throws SQLException {
+    private static JTable createQuerryPanelPSQL(String querry, Statement statement) throws SQLException {
         JPanel panel = new JPanel(new BorderLayout());
         DefaultTableModel model = new DefaultTableModel();
         ResultSet rs = statement.executeQuery(querry);
@@ -239,12 +235,11 @@ public class DataBase {
             model.addRow(element);
         }
         JTable table = new JTable(model);
-        JScrollPane jsp  = new JScrollPane(table);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
-        return jsp;
+        return table;
     }
 
-    private static Component createQuerryPanelSQLL(String querry, Statement statement) throws SQLiteException, SQLException {
+    private static JTable createQuerryPanelSQLL(String querry, Statement statement) throws SQLiteException, SQLException {
         JPanel panel = new JPanel(new BorderLayout());
         DefaultTableModel model = new DefaultTableModel();
         ResultSet rs = statement.executeQuery(querry);
@@ -280,12 +275,11 @@ public class DataBase {
             model.addRow(element);
         }
         JTable table = new JTable(model);
-        JScrollPane jsp  = new JScrollPane(table);
         panel.add(table.getTableHeader(), BorderLayout.NORTH);
-        return jsp;
+        return table;
     }
 
-    private static Component createNewSelectQuerry(final MyDBConnector connect, final String name) {
+    private static Component createNewQuerry(final MyDBConnector connect, final String name, final String querrymain, final JTable table) {
         final JPanel panel = new JPanel();
         final JTextArea textar = new JTextArea(2, 100);        
         panel.add(textar);
@@ -333,13 +327,132 @@ public class DataBase {
         updatebut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                try {
-                    connect.connection.createStatement().executeUpdate(textar.getText());
-                    //необходимо заново производить загрузку из базы возможно необходимо создать свои версии JTABBEDPANE
-                    panel.getRootPane().updateUI();
-                    
-                } catch (SQLException ex) {
+                switch(name){
+                    case "MySQL":
+                        try {
+                            connect.connection.createStatement().executeUpdate(textar.getText());
+                            DefaultTableModel model = new DefaultTableModel();
+                            ResultSet rs = connect.connection.createStatement().executeQuery(querrymain);
+                            ResultSetMetaData metadata = rs.getMetaData();
+                            for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                model.addColumn(metadata.getColumnName(col));
+                            }
+                            while (rs.next()){
+                                Vector element = new Vector();
+                                for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                    int type = metadata.getColumnType(col);                        
+                                    switch(type) {                        
+                                        case Types.INTEGER :
+                                            element.add(rs.getInt(col));
+                                            break;
+                                        case Types.VARCHAR :
+                                            element.add(rs.getString(col));
+                                            break;
+                                        case Types.BLOB :
+                                            element.add(rs.getBlob(col));
+                                            break;
+                                        case Types.REAL :
+                                            element.add(rs.getDouble(col));
+                                            break;
+                                        case Types.NULL:
+                                            element.add(null);
+                                            break;
+                                        default :
+                                            element.add(rs.getString(col));
+                                            break;
+                                    }
+                                }            
+                                model.addRow(element);
+                            }
+                            table.setModel(model);
+                            table.getRootPane().updateUI();
+                        } catch (SQLException ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        break;
+                    case "PostgreSQL":
+                        try {
+                            connect.connection.createStatement().executeUpdate(textar.getText());
+                            DefaultTableModel model = new DefaultTableModel();
+                            ResultSet rs = connect.connection.createStatement().executeQuery(querrymain);
+                            ResultSetMetaData metadata = rs.getMetaData();
+                            for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                model.addColumn(metadata.getColumnName(col));
+                            }
+                            while (rs.next()){
+                                Vector element = new Vector();
+                                for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                    int type = metadata.getColumnType(col);                        
+                                    switch(type) {                        
+                                        case Types.INTEGER :
+                                            element.add(rs.getInt(col));
+                                            break;
+                                        case Types.VARCHAR :
+                                            element.add(rs.getString(col));
+                                            break;
+                                        case Types.CHAR :
+                                            element.add(rs.getString(col));
+                                            break;
+                                        case Types.BIGINT :
+                                            element.add(rs.getBigDecimal(col));
+                                            break;
+                                        default :
+                                            element.add(rs.getString(col));
+                                            break;
+                                    }
+                                }            
+                                model.addRow(element);
+                            }
+                            table.setModel(model);
+                            table.getRootPane().updateUI();
+                        } catch (PSQLException ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (SQLException ex) {
                     Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                        break;
+                    case "SQLite":
+                        try {
+                            connect.connection.createStatement().execute(textar.getText());
+                            DefaultTableModel model = new DefaultTableModel();
+                            ResultSet rs = connect.connection.createStatement().executeQuery(querrymain);
+                            ResultSetMetaData metadata = rs.getMetaData();
+                            for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                model.addColumn(metadata.getColumnName(col));
+                            }
+                            while (rs.next()){
+                                Vector element = new Vector();
+                                for (int col = 1; col <= metadata.getColumnCount(); col++){
+                                    int type = metadata.getColumnType(col);                        
+                                    switch(type) {                        
+                                        case Types.INTEGER :
+                                            element.add(rs.getInt(col));
+                                            break;
+                                        case Types.VARCHAR :
+                                            element.add(rs.getString(col));
+                                            break;
+                                        case Types.BLOB :
+                                            element.add(rs.getBlob(col));
+                                            break;
+                                        case Types.REAL :
+                                            element.add(rs.getDouble(col));
+                                            break;
+                                        case Types.NULL:
+                                            element.add(null);
+                                            break;
+                                        default :
+                                            element.add(rs.getString(col));
+                                            break;
+                                    }
+                                }            
+                                model.addRow(element);
+                            }
+                            table.setModel(model);
+                            table.getRootPane().updateUI();
+                        } catch (SQLException ex) {
+                            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        break;
                 }
             }
         });
