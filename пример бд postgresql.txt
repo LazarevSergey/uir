@@ -1,0 +1,17 @@
+<База
+сервер: "localhost"
+пользователь: "postgres"
+пароль: "root"
+порт: "5433"
+база_данных: "sheme"
+выполнить: [
+<запрос
+имя: "object_to_object"
+запрос: "SELECT * FROM public.object_to_object">
+<запрос
+имя: "pragm"
+запрос: "SELECT * FROM public.pragm">
+<запрос
+имя: "concept"
+запрос: "SELECT * FROM public.concept">
+]>

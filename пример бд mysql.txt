@@ -1,0 +1,19 @@
+<База
+сервер: "localhost"
+пользователь: "root"
+пароль: ""
+база_данных: "sheme"
+выполнить: [
+<запрос
+имя: "object_to_object"
+запрос: "SELECT * FROM object_to_object">
+<запрос
+имя: "concept"
+запрос: "SELECT * FROM concept">
+<запрос
+имя: "objects"
+запрос: "SELECT * FROM objects">
+<запрос
+имя: "pragm"
+запрос: "SELECT * FROM pragm">
+]>

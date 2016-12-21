@@ -1,0 +1,10 @@
+<База
+база_данных: "sheme1"
+выполнить: [
+<запрос
+имя: "object_to_object"
+запрос: "SELECT * FROM object_to_object">
+<запрос
+имя: "concept"
+запрос: "SELECT * FROM concept">
+]>
